@@ -343,3 +343,20 @@ img { max-width: 100%; height: auto; display: block; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .dare-word, .dare-motto { opacity: 1; transform: none; }
 }
+
+.letter-intro { max-width: 560px; margin: -14px auto 30px; font-size: 15px; line-height: 1.6; color: var(--text); }
+.contact-form { max-width: 720px; margin: 0 auto; text-align: left; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+.form-field { margin-bottom: 18px; }
+.form-field label { display: block; margin-bottom: 8px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--heading); }
+.form-field .optional { font-weight: 400; text-transform: none; letter-spacing: .8px; color: var(--muted); }
+.form-field input, .form-field textarea { box-sizing: border-box; width: 100%; padding: 13px 14px; font-family: var(--font); font-size: 15px; letter-spacing: .5px; color: #ddd; background: var(--mid); border: 1px solid var(--line); border-radius: 4px; transition: border-color .25s ease; }
+.form-field textarea { resize: vertical; min-height: 150px; }
+.form-field input:focus, .form-field textarea:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 2px rgba(103, 142, 29, .35); }
+.contact-form .btn { margin-top: 4px; }
+.contact-form .btn:disabled { opacity: .6; cursor: wait; }
+.botcheck { display: none !important; }
+.form-status { min-height: 1.4em; margin: 16px 0 0; font-size: 14px; letter-spacing: .8px; }
+.form-status.success { color: var(--green-text); }
+.form-status.error { color: #e0675a; }
+@media (max-width: 720px) { .form-row { grid-template-columns: 1fr; } }

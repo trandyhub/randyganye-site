@@ -52,7 +52,7 @@
         </div>
         <ul class="social" aria-label="Profiles and email">
           <li><a href="https://www.linkedin.com/in/ganyerandy" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.83v1.54h.06c.53-1 1.84-2.06 3.8-2.06 4.06 0 4.81 2.67 4.81 6.15V21h-4v-4.98c0-1.19-.02-2.72-1.66-2.72-1.66 0-1.92 1.3-1.92 2.63V21h-4V9.75Z"/></svg></a></li>
-          <li><a href="mailto:trandy@live.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3.5 5.5h17v13h-17z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></a></li>
+          <li><a href="#contact" aria-label="Send a message" title="Send a message"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3.5 5.5h17v13h-17z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></a></li>
           <li><a href="https://scholar.google.com/citations?user=ghc5DBUAAAAJ" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2 1 9.5l4.2 2.86A7 7 0 0 0 12 22a7 7 0 0 0 6.8-9.64L23 9.5 12 2Zm0 18a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z"/></svg></a></li>
         </ul>
       </div>
@@ -283,13 +283,39 @@
     <section class="letter" id="contact" aria-labelledby="contact-h">
       <div class="container">
         <h2 id="contact-h">Contact</h2>
-        <a class="btn btn-solid btn-icon" href="mailto:trandy@live.com"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3.5 5.5h17v13h-17z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg><span>Send an email</span></a>
+        <p class="letter-intro">Have a question or an opportunity to discuss? Send a message below.</p>
+        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="5aa5b04f-757f-48f9-997f-4997406150f6">
+          <input type="hidden" name="subject" value="New message from randyganye.taraga.net">
+          <input type="hidden" name="from_name" value="randyganye.taraga.net">
+          <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-name">Name</label>
+              <input id="cf-name" type="text" name="name" autocomplete="name" required>
+            </div>
+            <div class="form-field">
+              <label for="cf-email">Email</label>
+              <input id="cf-email" type="email" name="email" autocomplete="email" required>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="cf-subject">Subject <span class="optional">(optional)</span></label>
+            <input id="cf-subject" type="text" name="visitor_subject">
+          </div>
+          <div class="form-field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="6" required></textarea>
+          </div>
+          <button class="btn btn-solid btn-icon" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3.5 5.5h17v13h-17z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg><span>Send a message</span></button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
       </div>
     </section>
 
     <section class="contact-strip" aria-label="Contact details">
       <ul class="container contact-grid">
-        <li><span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3.5 5.5h17v13h-17z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></span><span class="visually-hidden">Email: </span><a href="mailto:trandy@live.com">trandy@live.com</a></li>
+        <li><span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3.5 5.5h17v13h-17z"/><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="m3.5 6.5 8.5 6.5 8.5-6.5"/></svg></span><a href="#contact">Message</a></li>
         <li><span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4V21H3V9.75Zm6.5 0h3.83v1.54h.06c.53-1 1.84-2.06 3.8-2.06 4.06 0 4.81 2.67 4.81 6.15V21h-4v-4.98c0-1.19-.02-2.72-1.66-2.72-1.66 0-1.92 1.3-1.92 2.63V21h-4V9.75Z"/></svg></span><span class="visually-hidden">LinkedIn: </span><a href="https://www.linkedin.com/in/ganyerandy">linkedin.com/in/ganyerandy</a></li>
         <li><span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2 1 9.5l4.2 2.86A7 7 0 0 0 12 22a7 7 0 0 0 6.8-9.64L23 9.5 12 2Zm0 18a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z"/></svg></span><span class="visually-hidden">Google Scholar: </span><a href="https://scholar.google.com/citations?user=ghc5DBUAAAAJ">Google Scholar</a></li>
         <li><span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0C18.5 15.4 12 21 12 21Z"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><span class="visually-hidden">Location: </span><span>Maryland, United States</span></li>
@@ -320,7 +346,6 @@
         <section class="widget">
           <h2 class="widget-title">Profiles</h2>
           <ul>
-            <li>Email: <a href="mailto:trandy@live.com">trandy@live.com</a></li>
             <li><a href="https://www.linkedin.com/in/ganyerandy">LinkedIn</a></li>
             <li><a href="https://scholar.google.com/citations?user=ghc5DBUAAAAJ">Google Scholar</a></li>
             <li>Maryland, United States</li>
@@ -357,6 +382,25 @@
         });
       }, { rootMargin: '-45% 0px -50% 0px' });
       d.querySelectorAll('main section[id]').forEach(function (s) { obs.observe(s); });
+    })();
+    (function () {
+      var f = document.getElementById('contact-form');
+      if (!f || !window.fetch) return;
+      var b = f.querySelector('button[type="submit"]'), st = f.querySelector('.form-status'), label = b.querySelector('span');
+      f.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!f.checkValidity()) { f.reportValidity(); return; }
+        var data = Object.fromEntries(new FormData(f));
+        if (data.botcheck) return;
+        delete data.botcheck;
+        if (data.visitor_subject) data.subject = 'New message from randyganye.taraga.net: ' + data.visitor_subject;
+        b.disabled = true; label.textContent = 'Sending...'; st.className = 'form-status'; st.textContent = '';
+        fetch('https://api.web3forms.com/submit', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(data) })
+          .then(function (res) { return res.json().then(function (j) { if (!res.ok || !j.success) throw new Error(); }); })
+          .then(function () { st.className = 'form-status success'; st.textContent = 'Thank you, your message has been sent.'; f.reset(); })
+          .catch(function () { st.className = 'form-status error'; st.textContent = 'Sorry, something went wrong. Please try again later.'; })
+          .then(function () { b.disabled = false; label.textContent = 'Send a message'; });
+      });
     })();
   </script>
 </body>
